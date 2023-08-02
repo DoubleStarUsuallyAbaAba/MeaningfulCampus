@@ -30,10 +30,21 @@
 二、数据集制作  
 1.	通过保卫处获取校园真实监控视频  
 2.	选取室内、室外、白天、夜晚、雨天等场景，截取视频，导出图片  
-3.	利用DarkLabel标注视频图像  
+3.	利用DarkLabel标注工具标注视频图像
+   
+标签说明：  
+一段视频中每帧图片对应一个txt文件，每个txt文件中标签格式如下：  
+[class] [identity] [x_center] [y_center] [width] [height]  
+class为0，目前仅支持单类别多目标跟踪  
+identity是从1到num_identifies的整数(num_identifies是数据集中不同物体实例的总数)，如果此框没有identity标注，则为-1  
+[x_center] [y_center] [width] [height]是中心点坐标和宽高，它们的值是基于图片的宽度/高度进行标准化的，因此值为从0到1的浮点数  
+
 自制数据集：TJ-MOT包含4542张图片，1369个ID  
 训练集：TJ-MOT+公开数据集，包含58167张图片，15832个ID  
 验证集：MOT16，包含5316张图片  
+
+链接：https://pan.baidu.com/s/1CXGkIBavG5wugZhb-VhCog?pwd=6uvw 
+提取码：6uvw 
 
 三、技术原理  
 ①多目标追踪的基本思路：  
@@ -82,10 +93,8 @@ re-ID_embeddings通道数量变化为512→256→128，负责抽取re-ID特征�
 
 ⑥损失函数：  
 ![image](images_for_readme/loss1.png)  
-
 ![image](images_for_readme/loss2.png)  
-  
- 
+
 四、总结  
 FairMOT从  
 1.abchor-base→anchor-free  
@@ -93,3 +102,15 @@ FairMOT从
 3.dimension  
 这三方面对以往的异步过程MOT任务进行了优化，实现了速度与准确度兼备的效果  
 现阶段对于FairMOT的工作便于后续基于FairMOT的结果提取人体运动的时序片段进行人体关键点提取，进而进行基于关键点的动作分类，识别危险行为。  
+
+【运行项目】
+---
+本项目的实践环节主要目的在于原理性验证，代码参考：  
+https://aistudio.baidu.com/aistudio/projectdetail/2421822?channelType=0&channel=0  
+需要做的修改如下：  
+① 将项目fork之后，进入运行环境即可看到原始代码  
+② 文件夹PaddleDetection中的代码为主要代码  
+③ 若需要利用TJ-MOT数据集改动原始开源项目进行训练：  
+    1.将code→configs→datasets中的mot.yml文件进行替换  
+    2.将id_lists中的文件传入到PaddleDetection/dataset/mot/ids_with_labels文件夹中  
+    3.将TJ-MOT数据集上传至实验平台  
