@@ -55,12 +55,16 @@ MPD ROI数据集包含来自200人的400只手的16000张图像（每只手40张
 ---
 ① MobileFaceNet_train  
 ![image](images_for_readme/MobileFaceNet_train.jpg)   
+  
 ② MobileFaceNet_test  
 ![image](images_for_readme/MobileFaceNet_test.jpg)   
+  
 ③ MobileViT_train  
 ![image](images_for_readme/MobileViT_train.jpg)   
+  
 ④ MobileViT_test  
 ![image](images_for_readme/MobileViT_test.jpg)   
+  
 
 【结果数据】
 ---
