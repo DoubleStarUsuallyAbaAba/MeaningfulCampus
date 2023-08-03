@@ -107,7 +107,7 @@ AutoDL- RTX3080 pytorch1.8.1+cu111 opencv-python 4.7.0.12 python3.8.10
 ① 对于deltas而言，可以通过输出张量尺寸的方式帮助在实验过程中更好地理解算法逻辑  
 
 ![image](images_for_readme/p14.png)    
-![image](images_for_readme/p15.png)   
+![image](images_for_readme/p15.jpg)   
 
 ② Portland原数据集中的深度信息不能直接使用，而应当进行3位移位操作  
 
@@ -121,7 +121,7 @@ Portland数据集场景为室内旅馆，通常而言，物体的深度距离应
 ④	特殊后缀文件隐藏  
 在实验过程中发现，python执行过程中往往会生成.ipynb_checkpoints的中间文件，在一些情况下图像化界面中并不会显示这些特殊后缀的文件，但在循环遍历读取文件夹图片时，这些隐藏文件会导致程序报错，且不容易被发现错误源头  
 
-![image](images_for_readme/p19.png)   
+![image](images_for_readme/p19.jpg)   
 
 ⑤	评测指标计算公式  
 
@@ -138,4 +138,4 @@ Portland数据集场景为室内旅馆，通常而言，物体的深度距离应
 ---
 本实验中所使用的光心、焦距数据可能并不准确。在实验过程中并未查到portland数据集对应的相机光心和焦距数据，因此，直接采用了必应AI给出得到结果。不过从实验结果以及和其他同学的交流结果来看，所用光心、焦距数据应该是正确的。  
 
-![image](images_for_readme/p23.png)  
+![image](images_for_readme/p23.jpg)  
