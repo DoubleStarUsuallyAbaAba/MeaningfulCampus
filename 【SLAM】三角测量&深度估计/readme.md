@@ -73,7 +73,7 @@ AutoDL- RTX3080 pytorch1.8.1+cu111 opencv-python 4.7.0.12 python3.8.10
 ---
 1.若想在portland数据集中测试deltas方法，需要额外生成包含相邻两张图像之间相机位姿运动的R、T矩阵数据，写入pose.txt中。官方并不直接提供这部分数据，而是提供了计算脚本，其中可以发现官方的方法为SIFT+RANSAC  
 
-![image](images_for_readme/p7.png)
+![image](images_for_readme/p7.jpg)
   
 2.为了省略再次配置环境的麻烦，直接利用slambook对极几何章节实验中的ch7/pose_estimation_2d2d.cpp，进行相应的修改即可。这一过程中发现，portland数据集中少数相邻的两张图像检测到的匹配的特征点数少于5个，不满足“五点法”的要求，以及导致本质矩阵无法计算的问题。在程序中进行相应的判断，并将出错的图片名称记录在txt文件中，删除对应的图片即可。  
   
