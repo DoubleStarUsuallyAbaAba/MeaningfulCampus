@@ -41,10 +41,8 @@ AutoDL- RTX3080 pytorch1.8.1+cu111 opencv-python 4.7.0.12 python3.8.10
 
 【code文件说明】
 ---
-1.download.py用于爬虫爬取portland数据集（数据集官网没办法打包一整个数据集下载，只能点击一张图的链接下载一张，wget命令也不怎么有用）  
-   执行download.py需要原始的网页html数据，即code文件夹中的两个html文件，浏览器上直接ctrl+s就能把这俩网页保存下来  
-2.按照原论文开源代码中的ScanNet Sample数据格式样例准备相应格式的portland数据集  
-   pose.cpp用于估计相邻两张图像的RT变换矩阵  
+1.download.py用于爬虫爬取portland数据集（数据集官网没办法打包一整个数据集下载，只能点击一张图的链接下载一张，wget命令也不怎么有用）。执行download.py需要原始的网页html数据，即code文件夹中的两个html文件，浏览器上直接ctrl+s就能把这俩网页保存下来  
+2.按照原论文开源代码中的ScanNet Sample数据格式样例准备相应格式的portland数据集。pose.cpp用于估计相邻两张图像的RT变换矩阵  
 3.准备好数据集之后，用my_sequence_folders.py替换原来的sequence_folders.py  
 4.python mytest.py即可运行，得到最终的指标结果  
 5.triangulation.cpp负责执行传统三角测量算法  
