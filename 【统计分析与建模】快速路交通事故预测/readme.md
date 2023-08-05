@@ -244,7 +244,7 @@ AUC的两个值分别对应不使用逐步回归和使用逐步回归。
 
 ## 数据可视化（visualize）
 
-1. visualize.py  对应pictures
+1. visualize.py  对应pictures_1
 2. visualize_2.py对应pictures_2
 3. visualize_3.py对应pictures_3
 4. preprocess_1.py 将is_crash添加到traffic_data, time转秒数
