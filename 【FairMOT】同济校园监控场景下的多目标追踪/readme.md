@@ -114,3 +114,6 @@ https://aistudio.baidu.com/aistudio/projectdetail/2421822?channelType=0&channel=
     1.将code→configs→datasets中的mot.yml文件进行替换  
     2.将id_lists中的文件传入到PaddleDetection/dataset/mot/ids_with_labels文件夹中  
     3.将TJ-MOT数据集上传至实验平台  
+④ 加入TJ-MOT数据集后已经训练好的模型：  
+链接：https://pan.baidu.com/s/1QvJpUItYC7rqBWm8_6pEAA?pwd=wa3u 
+提取码：wa3u  
